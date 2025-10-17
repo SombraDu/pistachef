@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pistachef</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preload" href="font/Beach-Breaker.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body>
+  <div id="ui-blocker" class="ui-blocker" aria-hidden="true"></div>
+
+  <div id="history-overlay" class="history-overlay" aria-hidden="true"></div>
+
+
+<div id="history-modal" class="history-modal" aria-hidden="true">
+  <div class="history-modal-inner">
+    <h2>History – Pistachio Origins</h2>
+
+    <p>
+      Pistachio trees have grown in the Middle East for thousands of years. Pistachios have always been a desired delicacy in this region. Pistachios are mentioned in the Old Testament (Genesis 43:11).
+    </p>
+    <p>
+      In Persia (modern day Iran), pistachio trade and ownership of pistachio groves meant riches and high status. Legend has it that pistachios were a favorite of the Queen of Sheba, who demanded all her land’s production for herself and her court. Through the conquests of Alexander the Great (334–323 BC), the nut reached Greece. Later, under the rule of the Roman Emperor Tiberius (First Century AD), the nut was also introduced into Italy and Spain.
+    </p>
+
+    <img src="media/history1.jpg" alt="Historic Pistachio Trade">
+
+    <h3>The Historical Development of American Pistachios</h3>
+    <p>
+      During the 1880s, imported pistachios were popular in the USA, especially with Middle Eastern immigrants. The pistachio received further distribution through vending machines installed in underground train stations, bars, restaurants and other common locations. “A dozen for a nickel” soon developed into a familiar slogan.
+    </p>
+
+    <h3>In Search of the Perfect Pistachio for America</h3>
+    <p>
+      It was recognized that California’s Central Valley – due to its fertile soil, hot, dry climate and moderately cold winters – offered the ideal growing conditions for the nut. In 1929, American botanist William E. Whitehouse journeyed to Persia (modern day Iran) to collect pistachios. This pursuit came to a close in 1930, when he returned to the USA with a collection of approximately 20 pounds (10 kilograms) of individually selected nuts.
+    </p>
+    <p>
+      Of all the nuts Whitehouse collected, only one proved useful… Scientists propagated and strengthened the Kerman by budding it to heartier rootstock varieties.
+    </p>
+
+    <img src="media/history2.jpg" alt="American Pistachio History">
+  </div>
+</div>
+
+
+  <nav id="main-nav" class="nav" aria-hidden="true">
+    <div class="nav-inner">
+      
+      <div class="nav-left">
+        <button id="history-btn" class="nav-btn">History</button>
+      </div>
+<a id="navFacts" class="nav-facts" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10181398/"
+   target="_blank" rel="noopener noreferrer">
+  <span id="factText">A pistachio cooking site</span>
+</a>
+      <div class="nav-right">
+        <h4 class="nav-title">Pistachef</h4>
+        <img src="media/logo.png" alt="logo" class="nav-logo">
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="welcome" aria-hidden="false">
+    <div class="welcome-inner">
+      <h1>Welcome to Pistachef</h1>
+    </div>
+  </div>
+  
+
+  <div class="split-container" aria-hidden="false">
+    <div class="half sweet" data-side="sweet">
+      <span>Sweet</span>
+    </div>
+    <div class="half savory" data-side="savory">
+      <span>Savory</span>
+    </div>
+  </div>
+
+  <section id="menu-sweet" class="menu menu-sweet" aria-hidden="true">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h2>Sweet</h2>
+        <div class="hint">Press <kbd>Esc</kbd> to return</div>
+      </div>
+  
+      <div class="gallery-scroll">
+  
+        <div class="food-card">
+          <img src="media/6.png" alt="Pistachio Basque Cheesecake">
+          <h3>Pistachio Basque Cheesecake</h3>
+        </div>
+  
+        <div class="food-card">
+          <img src="media/5.png" alt="Pistachio Latte">
+          <h3>Pistachio Latte</h3>
+        </div>
+  
+        <div class="food-card">
+          <img src="media/1.png" alt="Pistachio Gelato">
+          <h3>Pistachio Gelato</h3>
+        </div>
+  
+        <div class="food-card">
+          <img src="media/2.png" alt="Pistachio Macaron">
+          <h3>Pistachio Macaron</h3>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section id="menu-savory" class="menu menu-savory" aria-hidden="true">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h2>Savory</h2>
+        <div class="hint">Press <kbd>Esc</kbd> to return</div>
+      </div>
+  
+      <div class="gallery-scroll">
+  
+        <div class="food-card">
+          <img src="media/7.png" alt="Pistachio Chicken Wings">
+          <h3>Pistachio Chicken Wings</h3>
+        </div>
+  
+        <div class="food-card">
+          <img src="media/4.png" alt="Halibut with Pistachio Soup">
+          <h3>Halibut with Pistachio Soup</h3>
+        </div>
+  
+        <div class="food-card">
+          <img src="media/3.png" alt="Pistachio Pesto Pasta">
+          <h3>Pistachio Pesto Pasta</h3>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section id="dish-detail" class="dish-detail" aria-hidden="true">
+    <button id="dish-return" class="dish-return">Return ›››</button>
+  
+    <div class="dish-wrapper">
+      <div class="dish-content">
+        <div class="dish-left">
+          <h1 class="dish-title">Pistachio Chicken Wings</h1>
+          <p class="dish-funfact">
+            Pistachios contain aromatic molecules called pyrazines,<br>
+            and similar compounds are produced when roasting chicken.<br>
+            This creates a mutually enhancing effect between the two<br>
+            at the olfactory level.
+          </p>
+        </div>
+        <div class="dish-right">
+          <img src="media/07.JPG" alt="Pistachio Chicken Wings" class="dish-image">
+        </div>
+      </div>
+  
+      <div class="dish-body">
+        <div class="recipe-columns">
+          <div class="recipe-left">
+            <h2>Ingredients</h2>
+            <ul class="ingredient-list">
+              <li><label><input type="checkbox"> chicken wings — 2 lbs (900 g)</label></li>
+              <li><label><input type="checkbox"> shelled pistachios — 1 cup (120 g)</label></li>
+              <li><label><input type="checkbox"> breadcrumbs (panko preferred) — 1/2 cup (60 g)</label></li>
+              <li><label><input type="checkbox"> Parmesan cheese (grated) — 2 tablespoons</label></li>
+              <li><label><input type="checkbox"> garlic (minced) — 2 cloves</label></li>
+              <li><label><input type="checkbox"> fresh parsley (chopped) — 1 teaspoon</label></li>
+              <li><label><input type="checkbox"> salt — 1 teaspoon</label></li>
+              <li><label><input type="checkbox"> black pepper — 1/2 teaspoon</label></li>
+              <li><label><input type="checkbox"> eggs (beaten) — 2</label></li>
+              <li><label><input type="checkbox"> olive oil / melted butter — 2 tablespoons</label></li>
+            </ul>
+          </div>
+          <div class="recipe-right">
+            <h2>Steps</h2>
+            <ol class="steps-list">
+              <li><strong>Step 1:</strong> Preheat oven to 400°F (200°C). Line a baking sheet with parchment or foil.</li>
+              <li><strong>Step 2:</strong> In a food processor, pulse pistachios until finely chopped (not powder). Mix with breadcrumbs, Parmesan, garlic, parsley, salt, and pepper.</li>
+              <li><strong>Step 3:</strong> Dip each chicken wing into beaten eggs. Roll in the pistachio mixture, pressing to adhere.</li>
+              <li><strong>Step 4:</strong> Arrange wings on the prepared sheet, drizzle lightly with olive oil or melted butter. Bake 35–40 minutes, flipping halfway, until golden and cooked through.<br>
+                <button id="start-timer" class="timer-btn">Start 35-Minute Timer</button>
+                <div id="timer-display" class="timer-display">35:00</div>
+              </li>
+              <li><strong>Step 5:</strong> Sprinkle with extra crushed pistachios and fresh parsley. Serve hot with lemon wedges or a yogurt-herb dip.</li>
+            </ol>
+            <div class="tips-box">
+              <strong>Tips:</strong> For extra crunch: toast pistachios lightly before chopping.
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="dish-cheesecake" class="dish-detail" aria-hidden="true">
+    <button class="dish-return">Return ›››</button>
+  
+    <div class="dish-wrapper">
+      <div class="dish-content">
+        <div class="dish-left">
+          <h1 class="dish-title">Pistachio Basque Cheesecake</h1>
+          <p class="dish-funfact">
+            Basque cheesecake is baked at high heat for a caramelized surface.<br>
+            The pistachio adds nutty depth and balances its creamy center.
+          </p>
+        </div>
+        <div class="dish-right">
+          <img src="media/06.JPG" alt="Pistachio Basque Cheesecake" class="dish-image">
+        </div>
+      </div>
+  
+      <div class="dish-body">
+        <div class="recipe-columns">
+
+          <div class="recipe-left">
+            <h2>Ingredients (8-inch pan)</h2>
+            <ul class="ingredient-list">
+              <li><label><input type="checkbox"> cream cheese (softened) — 16 oz (450 g)</label></li>
+              <li><label><input type="checkbox"> sugar — 1 cup (200 g)</label></li>
+              <li><label><input type="checkbox"> eggs — 4</label></li>
+              <li><label><input type="checkbox"> heavy cream — 1 cup (240 ml)</label></li>
+              <li><label><input type="checkbox"> pistachio paste — 1/2 cup (120 g)</label></li>
+              <li><label><input type="checkbox"> vanilla extract — 1 teaspoon</label></li>
+              <li><label><input type="checkbox"> salt — 1/4 teaspoon</label></li>
+              <li><label><input type="checkbox"> all-purpose flour (sifted) — 1/4 cup (30 g)</label></li>
+            </ul>
+          </div>
+  
+
+          <div class="recipe-right">
+            <h2>Instructions</h2>
+            <ol class="steps-list">
+              <li><strong>Step 1:</strong> Preheat oven to 400°F (200°C).<br>Line an 8-inch (20 cm) springform pan with parchment paper, leaving overhang on all sides.</li>
+  
+              <li><strong>Step 2:</strong> In a large bowl, beat cream cheese and sugar until smooth.<br>
+                Add eggs one at a time, mixing well after each.<br>
+                Mix in heavy cream, pistachio paste, vanilla, and salt until fully incorporated.<br>
+                Finally, fold in the sifted flour until smooth.
+              </li>
+  
+              <li><strong>Step 3:</strong> Pour batter into the prepared pan. Bake 45–55 minutes, until the top is deeply golden brown and the center still jiggles slightly.<br>
+                <button class="timer-btn" data-time="50">Start 50-Minute Timer</button>
+                <div class="timer-display">50:00</div>
+              </li>
+  
+              <li><strong>Step 4:</strong> Let cheesecake cool completely in the pan.<br>
+                Chill for at least 4 hours (or overnight) before slicing.
+              </li>
+            </ol>
+  
+            <div class="tips-box">
+              <strong>Tips:</strong> The burnt top is part of the Basque cheesecake’s charm — don’t be afraid of a dark surface.
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section id="dish-gelato" class="dish-detail" aria-hidden="true">
+  <button class="dish-return">Return ›››</button>
+
+  <div class="dish-wrapper">
+    <div class="dish-content">
+      <div class="dish-left">
+        <h1 class="dish-title">Pistachio Gelato</h1>
+        <p class="dish-funfact">
+          Pistachio gelato is Italy’s signature frozen dessert—<br>
+          rich, silky, and intensely nutty.  
+        </p>
+      </div>
+      <div class="dish-right">
+        <img src="media/01.JPG" alt="Pistachio Gelato" class="dish-image">
+      </div>
+    </div>
+
+    <div class="dish-body">
+      <div class="recipe-columns">
+
+
+        <div class="recipe-left">
+          <h2>Ingredients</h2>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> whole milk — 2 cups (500 ml)</label></li>
+            <li><label><input type="checkbox"> sugar — 1/3 cup (65 g)</label></li>
+            <li><label><input type="checkbox"> cornstarch — 2 tablespoons (16 g)</label></li>
+            <li><label><input type="checkbox"> pistachio paste — 7 oz (200 g)</label></li>
+            <li><label><input type="checkbox"> lemon or orange juice — a few drops</label></li>
+          </ul>
+        </div>
+
+
+        <div class="recipe-right">
+          <h2>Instructions</h2>
+          <ol class="steps-list">
+            <li><strong>Step 1:</strong> In a small bowl, whisk 1/4 cup of the milk with the cornstarch until smooth. Set aside.</li>
+            <li><strong>Step 2:</strong> Heat the remaining milk with the sugar in a saucepan until it almost boils (tiny bubbles around the edges).</li>
+            <li><strong>Step 3:</strong> Slowly whisk in the cornstarch slurry. Keep cooking over low heat, whisking constantly, for about 3 minutes until slightly thickened.</li>
+            <li><strong>Step 4:</strong> Remove from the heat. Transfer to another container and chill completely in the refrigerator (overnight is best).</li>
+            <li><strong>Step 5:</strong> Once cold, whisk in the pistachio paste and a few drops of citrus juice until smooth.</li>
+            <li><strong>Step 6:</strong> Churn the mixture in an ice cream maker according to the manufacturer’s instructions, until it reaches soft-serve texture.</li>
+            <li><strong>Step 7:</strong> Transfer to a container, freeze until firm, and serve.</li>
+          </ol>
+
+          <div class="tips-box">
+            <strong>Tips:</strong> Cornstarch or a small amount of honey/glucose syrup can reduce gelato crystallization.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dish-latte" class="dish-detail" aria-hidden="true">
+  <button class="dish-return">Return ›››</button>
+
+  <div class="dish-wrapper">
+    <div class="dish-content">
+      <div class="dish-left">
+        <h1 class="dish-title">Pistachio Latte</h1>
+        <p class="dish-funfact">
+          A creamy blend of espresso and pistachio paste,<br>
+          inspired by café trends in Seoul and Milan.
+        </p>
+      </div>
+      <div class="dish-right">
+        <img src="media/05.JPG" alt="Pistachio Latte" class="dish-image">
+      </div>
+    </div>
+
+    <div class="dish-body">
+      <div class="recipe-columns">
+
+        <div class="recipe-left">
+          <h2>Ingredients</h2>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> espresso — 1 shot</label></li>
+            <li><label><input type="checkbox"> milk (whole or oat for creaminess) — 1 cup</label></li>
+            <li><label><input type="checkbox"> pistachio paste — 1–2 tablespoons</label></li>
+            <li><label><input type="checkbox"> honey or sugar — 1 teaspoon</label></li>
+            <li><label><input type="checkbox"> ground cardamom or cinnamon — a pinch</label></li>
+            <li><label><input type="checkbox"> chopped pistachios — for garnish</label></li>
+          </ul>
+        </div>
+
+
+        <div class="recipe-right">
+          <h2>Instructions</h2>
+          <ol class="steps-list">
+            <li><strong>Step 1:</strong> In a small saucepan, whisk together the pistachio paste, honey (or sugar), and 2–3 tablespoons of the milk. Heat gently until smooth and combined.</li>
+            <li><strong>Step 2:</strong> Add the rest of the milk and heat until warm (do not boil). Froth with a milk frother, whisk, or by shaking in a jar.</li>
+            <li><strong>Step 3:</strong> Brew 1 shot of espresso (or use strong coffee).</li>
+            <li><strong>Step 4:</strong> Pour the pistachio-flavored milk over the espresso in a mug. Stir gently.</li>
+            <li><strong>Step 5:</strong> Sprinkle with chopped pistachios or a pinch of cardamom/cinnamon for garnish.</li>
+          </ol>
+
+          <div class="tips-box">
+            <strong>Tips:</strong> Thoroughly stir the pistachio paste with a small amount of hot milk or hot water before mixing. This ensures a smoother flavor.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="dish-macaron" class="dish-detail" aria-hidden="true">
+  <button class="dish-return">Return ›››</button>
+
+  <div class="dish-wrapper">
+    <div class="dish-content">
+      <div class="dish-left">
+        <h1 class="dish-title">Pistachio Macaron</h1>
+        <p class="dish-funfact">
+          The pistachio macaron pairs French technique with a Mediterranean soul—<br>
+          crisp outside, tender inside, and filled with nutty buttercream.
+        </p>
+      </div>
+      <div class="dish-right">
+        <img src="media/02.JPG" alt="Pistachio Macaron" class="dish-image">
+      </div>
+    </div>
+
+    <div class="dish-body">
+      <div class="recipe-columns">
+
+
+        <div class="recipe-left">
+          <h2>Ingredients (18–20 macarons)</h2>
+          <h3>For the shells</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> almond flour — 1 cup (100 g)</label></li>
+            <li><label><input type="checkbox"> powdered sugar — 3/4 cup (100 g)</label></li>
+            <li><label><input type="checkbox"> egg whites — 2 (about 60 g)</label></li>
+            <li><label><input type="checkbox"> granulated sugar — 1/4 cup (50 g)</label></li>
+          </ul>
+
+          <h3>For the pistachio buttercream</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> unsalted butter (softened) — 1/2 cup (115 g)</label></li>
+            <li><label><input type="checkbox"> powdered sugar — 3/4 cup (90 g)</label></li>
+            <li><label><input type="checkbox"> pistachio paste (or finely ground pistachios) — 1/4 cup (60 g)</label></li>
+            <li><label><input type="checkbox"> heavy cream or milk — 1–2 teaspoons</label></li>
+          </ul>
+        </div>
+
+
+        <div class="recipe-right">
+          <h2>Instructions</h2>
+
+          <h3>Make the shells</h3>
+          <ol class="steps-list">
+            <li>Sift together almond flour and powdered sugar. Discard any large bits.</li>
+            <li>In a clean bowl, whip egg whites on medium speed until foamy. Gradually add granulated sugar and beat to stiff peaks. Add coloring if desired.</li>
+            <li>Gently fold almond flour mixture into egg whites until the batter flows like thick lava and forms ribbons.</li>
+            <li>Transfer batter to a piping bag with round tip. Pipe 1.5 in (3–4 cm) circles onto a parchment-lined baking sheet.</li>
+            <li>Tap sheet to release air bubbles. Let shells sit 30–60 minutes until tops are dry to the touch.</li>
+            <li>Bake at 300°F (150°C) for 15–18 minutes. Shells are done when they have “feet” and lift off cleanly. Cool completely.</li>
+          </ol>
+
+          <h3>Make the buttercream</h3>
+          <ol class="steps-list">
+            <li>Beat butter until creamy.</li>
+            <li>Add powdered sugar and mix until smooth.</li>
+            <li>Add pistachio paste and blend well.</li>
+            <li>Adjust consistency with 1–2 tsp cream or milk if needed.</li>
+          </ol>
+
+          <h3>Assemble</h3>
+          <ol class="steps-list">
+            <li>Pipe pistachio buttercream onto one shell and sandwich with another.</li>
+            <li>Store in an airtight container in the fridge for 24 hours before serving.</li>
+          </ol>
+
+          <div class="tips-box">
+            <strong>Tips:</strong> Let macarons rest overnight for the best texture—the shell absorbs moisture from the filling to achieve chewiness.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dish-halibut" class="dish-detail" aria-hidden="true">
+  <button class="dish-return">Return ›››</button>
+
+  <div class="dish-wrapper">
+    <div class="dish-content">
+      <div class="dish-left">
+        <h1 class="dish-title">Halibut with Pistachio Soup</h1>
+        <p class="dish-funfact">
+          In times before cream or starch, ground pistachios thickened sauces like a modern roux—<br>
+          lending fish stews a silky smooth texture and rich aroma.
+        </p>
+      </div>
+      <div class="dish-right">
+        <img src="media/04.JPG" alt="Halibut with Pistachio Soup" class="dish-image">
+      </div>
+    </div>
+
+    <div class="dish-body">
+      <div class="recipe-columns">
+
+
+        <div class="recipe-left">
+          <h2>Ingredients</h2>
+
+          <h3>Pistachio Soup Base</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> olive oil — 2 tbsp (30 ml)</label></li>
+            <li><label><input type="checkbox"> diced onion — 2/3 cup (75 g)</label></li>
+            <li><label><input type="checkbox"> thyme (chopped) — 2 pinches</label></li>
+            <li><label><input type="checkbox"> garlic — 1 clove</label></li>
+            <li><label><input type="checkbox"> whole pistachios (unsalted) — 1/2 cup (80 g)</label></li>
+            <li><label><input type="checkbox"> chicken stock — 4 cups (1000 ml)</label></li>
+            <li><label><input type="checkbox"> salt, black pepper — to taste</label></li>
+          </ul>
+
+          <h3>Vegetable Garnish</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> olive oil — 1/4 cup (60 ml)</label></li>
+            <li><label><input type="checkbox"> onion (diced) — 1 cup (120 g)</label></li>
+            <li><label><input type="checkbox"> butternut squash (peeled, diced) — 1/2 cup (120 g)</label></li>
+            <li><label><input type="checkbox"> fennel (chopped) — 4/3 cups (120 g)</label></li>
+            <li><label><input type="checkbox"> celery (diced) — 3/4 cup (120 g)</label></li>
+            <li><label><input type="checkbox"> carrot (diced, peeled) — 3 cups (120 g)</label></li>
+            <li><label><input type="checkbox"> white wine — 500 ml</label></li>
+            <li><label><input type="checkbox"> chicken stock — 1 cup (250 ml)</label></li>
+            <li><label><input type="checkbox"> salt, black pepper — to taste</label></li>
+          </ul>
+
+          <h3>Pistachio Pesto</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> fresh basil leaves — 15</label></li>
+            <li><label><input type="checkbox"> garlic (whole) — 1 clove</label></li>
+            <li><label><input type="checkbox"> potato (cooked) — 2 tbsp (20 g)</label></li>
+            <li><label><input type="checkbox"> whole pistachios — 1/3 cup (50 g)</label></li>
+            <li><label><input type="checkbox"> extra virgin olive oil — 1/2 cup (100 ml)</label></li>
+            <li><label><input type="checkbox"> lemon juice — 1/2 lemon</label></li>
+            <li><label><input type="checkbox"> salt, black pepper — to taste</label></li>
+          </ul>
+
+          <h3>Fish</h3>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> halibut fillet — 1 lb (500 g)</label></li>
+            <li><label><input type="checkbox"> salt, black pepper — to taste</label></li>
+          </ul>
+        </div>
+
+
+        <div class="recipe-right">
+          <h2>Instructions</h2>
+
+          <h3>Make the Pistachio Soup Base</h3>
+          <ol class="steps-list">
+            <li>Heat olive oil in a large saucepan over medium heat. Add onion, thyme, garlic, and pistachios. Sauté about 5 minutes until golden brown.</li>
+            <li>Add chicken stock and bring to a boil. Reduce heat and simmer about 20 minutes. Season with salt and pepper. Transfer mixture to a blender, blend until smooth, strain through a fine sieve. Set aside.</li>
+          </ol>
+
+          <h3>Prepare the Vegetable Garnish</h3>
+          <ol class="steps-list">
+            <li>In a skillet over medium heat, warm olive oil. Add onion, butternut squash, fennel, celery, and carrots. Sauté about 5 minutes. Season with salt and pepper.</li>
+            <li>Add white wine and cook until reduced. Add chicken stock and cook until vegetables are tender and liquid is mostly absorbed. Set aside.</li>
+          </ol>
+
+          <h3>Make the Pistachio Pesto</h3>
+          <ol class="steps-list">
+            <li>In a mortar and pestle, pound basil, garlic, potato, pistachios, and a pinch of salt until roughly crushed.</li>
+            <li>Gradually add olive oil while continuing to pound until smooth. Stir in lemon juice, adjust seasoning, and set aside.</li>
+          </ol>
+
+          <h3>Cook the Halibut</h3>
+          <ol class="steps-list">
+            <li>Season halibut cubes with salt and pepper.</li>
+            <li>Heat olive oil in a skillet over medium-high heat. Pan-sear halibut about 2 minutes per side, until golden brown. Drain briefly on paper towels.</li>
+          </ol>
+
+          <h3>To Serve</h3>
+          <p>Ladle pistachio soup into shallow bowls. Spoon vegetables into the center, then place 5–6 pieces of halibut on top. Finish with a dollop of pistachio pesto and a drizzle of olive oil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="dish-pasta" class="dish-detail" aria-hidden="true">
+  <button class="dish-return">Return ›››</button>
+
+  <div class="dish-wrapper">
+    <div class="dish-content">
+      <div class="dish-left">
+        <h1 class="dish-title">Pistachio Pesto Pasta</h1>
+        <p class="dish-funfact">
+          A fresh, nutty twist on the classic pesto —<br>
+          the pistachio’s buttery aroma pairs perfectly with lemon and basil.
+        </p>
+      </div>
+      <div class="dish-right">
+        <img src="media/03.JPG" alt="Pistachio Pesto Pasta" class="dish-image">
+      </div>
+    </div>
+
+    <div class="dish-body">
+      <div class="recipe-columns">
+
+
+        <div class="recipe-left">
+          <h2>Ingredients</h2>
+          <ul class="ingredient-list">
+            <li><label><input type="checkbox"> pasta — 12 oz (340 g)</label></li>
+            <li><label><input type="checkbox"> shelled pistachios — 1 cup (120 g)</label></li>
+            <li><label><input type="checkbox"> basil leaves — 1 cup (30 g)</label></li>
+            <li><label><input type="checkbox"> Parmesan cheese (grated) — 1/2 cup (120 ml)</label></li>
+            <li><label><input type="checkbox"> lemon or orange juice — 1/2 cup (50 g)</label></li>
+            <li><label><input type="checkbox"> garlic — 1–2 cloves</label></li>
+            <li><label><input type="checkbox"> lemon juice — 1/2 lemon</label></li>
+            <li><label><input type="checkbox"> salt & black pepper — to taste</label></li>
+          </ul>
+        </div>
+
+        <div class="recipe-right">
+          <h2>Instructions</h2>
+          <ol class="steps-list">
+            <li><strong>Step 1:</strong> Boil pasta in salted water until al dente. Reserve 1/2 cup pasta water before draining.</li>
+            <li><strong>Step 2:</strong> In a food processor, pulse pistachios, basil, garlic, Parmesan, lemon zest/juice, salt, and pepper.<br>
+              Slowly stream in olive oil while blending until smooth but still textured.
+            </li>
+            <li><strong>Step 3:</strong> Combine drained pasta with pesto. Add a splash of reserved pasta water to loosen sauce if needed.</li>
+            <li><strong>Step 4:</strong> Garnish with extra pistachios, basil leaves, and Parmesan.</li>
+          </ol>
+
+          <div class="tips-box">
+            <strong>Tips:</strong> Mix basil with parsley, mint, or arugula for different flavor notes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
